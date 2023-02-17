@@ -1,0 +1,106 @@
+/// Homepage Styles File
+/// Here we import all the Styles files we need for our Homepage.
+
+#home-page{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    
+}
+
+.wrapper{
+    display: flex;
+    gap: 5rem;    
+    width: 80%;
+    margin: 0 auto;
+
+    @media (max-width: 1024px){
+        padding: 3rem 1rem;
+        display: block;
+    }
+}
+
+
+.home-page-header{
+    align-items: flex-start;
+    & > h1{
+        --home-page-header-size: 48px;
+        --home-page-header-line-height: 56px;
+        --home-page-header-letter-spacing: -0.2%;
+        --home-page-header-font-weight: 500;
+    
+        @media (max-width: 600px){
+        --home-page-header-size: 32px;
+        --home-page-header-line-height: 40px;
+        }        
+        font-size: var(--home-page-header-size);
+        line-height: var(--home-page-header-line-height);
+        letter-spacing: var(--home-page-header-letter-spacing);
+        font-weight: var(--home-page-header-font-weight);
+    }
+
+    & > p{
+        --home-page-paragraph-size: 16px;
+        --home-page-paragraph-line-height: 25px;
+        --home-page-paragraph-font-weight: 400;    
+         
+        font-size:var(--home-page-paragraph-size);
+        line-height: var(--home-page-paragraph-line-height);
+        font-weight: var(--home-page-paragraph-font-weight);
+    }
+    
+}
+
+
+.cards-container{    
+    gap: 16px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+
+
+    @media (max-width: 600px){
+        grid-template-columns: 1fr;        
+    }
+
+}
+
+.card{
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    gap: 16px;
+    flex-basis: 45%;
+
+
+
+    &__icon{
+        background: #373155;
+        border-radius: 14px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 14px;
+
+        & > img{
+            width: 28px;
+        }
+    }
+
+    &__title{
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 24px;
+    }
+
+    &__content{
+        font-size: 14px;
+        line-height: 22px;
+        font-weight: 400;
+    }
+}
